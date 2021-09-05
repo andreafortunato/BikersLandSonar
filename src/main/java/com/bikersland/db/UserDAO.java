@@ -147,13 +147,13 @@ public class UserDAO {
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		int affected_rows;
+		int affectedRows;
 		
 		try {
 			stmt = DBConnection.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-			affected_rows = CRUDQueries.changeUserEmail(stmt, userId, userEmail);
+			affectedRows = CRUDQueries.changeUserEmail(stmt, userId, userEmail);
 	        
-	        if(affected_rows != 1) {
+	        if(affectedRows != 1) {
 	        	throw new UserNotFoundException();
 	        }
 		} catch (SQLException sqle) {
