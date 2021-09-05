@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+:root {
+  --color-primary: #0CF;
+  --color-primary-dark: derive(-color-primary, -30%);
+}
+
+button:disabled,
+button:disabled:hover {
+	background-color: #696969;
+  color: #d4d4d4;
+  cursor: no-drop;
+}
+
+.img-btn {
+  position: relative;
+  text-align: center;
+}
+
+
+.imb-in-btn {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.table th {
+	padding: .75rem 0rem .75rem 0rem !important;
+	width: 205px;
+}
+
+.card-border {
+  border-style: solid !important; 
+  border-width: 5px !important;
+  border-color: var(--color-primary) !important;
+  border-radius: 10px !important;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 0;
+  border-bottom: 1px solid black;
+  color: white;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--color-primary) var(--color-primary) black var(--color-primary);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.tab.active {
+  background-color: #CCC;
+  color: black;
+}
+
+.tab:hover {
+  background-color: #AAA;
+}
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Besley');
+
+* {
+    font-family: Besley;
+    font-size: 20px;
+}
+
+.side-links {
+  position: absolute;
+  top: 55px;
+  right: 15px;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: white;
+  width: 180px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.side-link-youtube {
+  background-color: red;
+}
+
+.side-link-twitter {
+  background-color: #1DA1F2;
+}
+
+.side-link-github {
+  background-color: #6e5494;
+}
+
+.side-link-text {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.side-link-icon {
+  color: white;
+  font-size: 30px;
+}
+
+.custom-btn, button {
+  color: #fff;
+  border-color: #007bff;
+  
+  background-color: #303030;
+  border-color: #FFF;
+  border-radius: 4px;
+  color: var(--color-primary);
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.custom-btn:hover, button:hover {
+  background-color: var(--color-primary);
+  color: #FFF;
+}
+
+.custom-btn:active, button:active {
+	filter: brightness(0.80);
+}
+
+.custom-btn:focus, button:focus {outline:0;}
+
+.parent {
+   display: table;
+   text-align: center;
+}
+#formLogin {
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}
+
+body {
+	 background-color: #121212;
+}
+
+.headLabel{
+	color: white;
+	text-align:center;
+  color: var(--color-primary);
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+div {
+  text-align: left;
+  /*
+  background-color: rgba(86,61,124,1);
+  border: 1px solid rgba(0,255,0,1);
+  */
+    
+  color: white;
+    
+  padding: 0px !important;
+  
+  display: inline-block;
+  background-color: transparent;
+}
+
+
+
+.header {
+  background-color: #121212;
+}
