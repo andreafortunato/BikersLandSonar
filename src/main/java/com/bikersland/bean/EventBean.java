@@ -15,13 +15,8 @@ import javafx.scene.image.Image;
 public class EventBean 
 {
 	private Integer id;
-	private String title;
-	private String description;
-	private String ownerUsername;
-	private String departureCity;
-	private String destinationCity;
-	private Date departureDate;
-	private Date returnDate;
+	private String title, description, ownerUsername, departureCity, destinationCity;
+	private Date departureDate, returnDate;
 	private Image image;
 	private Date createTime;
 	private List<String> tags = new ArrayList<>();

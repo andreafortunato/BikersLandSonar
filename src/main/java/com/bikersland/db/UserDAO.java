@@ -145,7 +145,6 @@ public class UserDAO {
 	
 	public static void changeUserEmail(Integer userId, String userEmail) throws SQLException, UserNotFoundException, DuplicateEmailException {
 		Statement stmt = null;
-		ResultSet rs = null;
 		
 		int affectedRows;
 		
@@ -158,18 +157,13 @@ public class UserDAO {
 	        }
 		} catch (SQLException sqle) {
 			int errorCode = sqle.getErrorCode();
-			if(errorCode == 1062) {
-				if(sqle.getMessage().contains("email_UNIQUE")) {
-					/* Email già presente */
-					throw new DuplicateEmailException(Main.getBundle().getString("ex_duplicate_email"));
-				}
+			if(errorCode == 1062 && sqle.getMessage().contains("email_UNIQUE")) {
+				/* Email già presente */
+				throw new DuplicateEmailException(Main.getBundle().getString("ex_duplicate_email"));
 			}
 			
 			throw sqle;
 		} finally {
-			if(rs != null)
-				rs.close();
-			
 			if (stmt != null)
 				stmt.close();
 		}

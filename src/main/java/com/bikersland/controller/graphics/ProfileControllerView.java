@@ -92,13 +92,7 @@ public class ProfileControllerView
         MenuItem item1 = new MenuItem();
         item1.setText(Main.getBundle().getString("change_email"));
         item1.setStyle(null);
-        item1.setOnAction(new EventHandler<ActionEvent>() {
- 
-            @Override
-            public void handle(ActionEvent event) {
-                changeEmail();
-            }
-        });
+        item1.setOnAction(event -> changeEmail());
  
         contextMenu.getItems().add(item1);
         lblEmail.setContextMenu(contextMenu);
