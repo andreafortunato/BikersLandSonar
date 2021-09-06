@@ -1,0 +1,89 @@
+{
+  "id": "84156a63-570e-4700-bced-bb2112bd1404",
+  "version": "2.0",
+  "name": "BikersLandSeleniumIDEDeSantis",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "7c1ce074-f68f-467d-9778-6cb2f9d12088",
+    "name": "TestDestinationEventCity",
+    "commands": [{
+      "id": "d95dbf6e-4dd1-428e-a9b5-0d010629001a",
+      "comment": "",
+      "command": "open",
+      "target": "/BikersLand/index.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24d01293-dda9-485a-8706-5b6a331b2d58",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75e6c276-23fb-4016-884d-a9c4490c97c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=destination-city",
+      "targets": [
+        ["id=destination-city", "id"],
+        ["name=destination-city", "name"],
+        ["css=#destination-city", "css:finder"],
+        ["xpath=//select[@id='destination-city']", "xpath:attributes"],
+        ["xpath=//div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c2d9f6f-336a-403e-94f1-fbfa3397d9ab",
+      "comment": "",
+      "command": "select",
+      "target": "id=destination-city",
+      "targets": [],
+      "value": "label=Perugia (PG)"
+    }, {
+      "id": "4e2a86a3-f0a9-4ff7-9d88-cc4a29023438",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.custom-btn", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a053949a-dc10-4c64-8282-a0575b6b839d",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[2]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Perugia (PG)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a84e414-a24a-4699-bd51-a652448c60b3",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[2]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Perugia (PG)')]", "xpath:innerText"]
+      ],
+      "value": "Perugia (PG)"
+    }]
+  }],
+  "suites": [{
+    "id": "9d922703-bdd3-485e-95a8-34183a4ce29c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7c1ce074-f68f-467d-9778-6cb2f9d12088"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

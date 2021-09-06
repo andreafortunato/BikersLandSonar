@@ -1,0 +1,125 @@
+{
+  "id": "81216fe4-9579-49c3-b9b9-ef883f39b6ba",
+  "version": "2.0",
+  "name": "SeleniumGUI_Fortunato",
+  "url": "http://localhost:8080/BikersLand/index.jsp",
+  "tests": [{
+    "id": "bdbeccee-042e-45c5-b773-0de0cfe04890",
+    "name": "CheckUserEmail",
+    "commands": [{
+      "id": "ee4133aa-bb6a-4aa5-a06f-0c734aeaa068",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/BikersLand/login.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "673fc139-8e5a-452a-8ddb-01313b457f19",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1371x828",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4811e2df-07db-4e1c-9f4e-a3bb48815307",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f2804d1-ab40-46c2-88c2-a7ba054de6f1",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "galaxy"
+    }, {
+      "id": "7a71923a-e7d4-45b1-80ce-5c5b786e5e2f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "password"
+    }, {
+      "id": "742565ba-d74b-4a85-9998-487f2e01522d",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=.custom-btn", "css:finder"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a12c958-7b06-43ae-af09-ba3776392d22",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row > button",
+      "targets": [
+        ["css=.row > button", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'YOUR PROFILE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f35bf0de-00b4-4baa-b45d-952c435b6aea",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > th",
+      "targets": [
+        ["css=tr:nth-child(3) > th", "css:finder"],
+        ["xpath=//tr[3]/th", "xpath:position"],
+        ["xpath=//th[contains(.,'xgalaxy97x@gmail.com')]", "xpath:innerText"]
+      ],
+      "value": "xgalaxy97x@gmail.com"
+    }, {
+      "id": "1995a331-d6c4-446d-86f2-3b835dbc3b62",
+      "comment": "",
+      "command": "click",
+      "target": "name=logout",
+      "targets": [
+        ["name=logout", "name"],
+        ["css=form:nth-child(2) > .custom-btn", "css:finder"],
+        ["xpath=//input[@name='logout']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "629dd5a8-6a52-49b8-af40-01f1f37186e8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bdbeccee-042e-45c5-b773-0de0cfe04890"]
+  }],
+  "urls": ["http://localhost:8080/BikersLand/index.jsp"],
+  "plugins": []
+}
